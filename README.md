@@ -100,6 +100,11 @@ No telemetry, no network calls, no credentials, no files outside `$DSH_HOME`.
 
 - **Irreversible.** There is no trash can and no undo. Use archive when you might
   want the session back.
+- **Replacing an existing install.** On Windows, pnpm cannot replace the folder of
+  a bundle the running app has already loaded, and the install fails with
+  `EPERM ... rename ... node_modules/dsh-session-delete`. Install on a fresh
+  profile, or `remove_bundle` the old install first and then install this one. The
+  failure leaves the previous install untouched.
 - The session you currently have open is closed before its files go away; the
   conversation is not preserved anywhere.
 - The full-text search index (`session-query-sqlite`) is a derived read model owned

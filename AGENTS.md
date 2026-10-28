@@ -97,6 +97,7 @@ patch applied by hand is easy to get wrong and takes the whole GUI down with it.
 | Symptom | Meaning | What to do |
 |---|---|---|
 | `install_bundle` reports `overridden` | a higher-priority layer wins | report it; another profile patch owns the row id `session-delete` |
+| `install_bundle` fails with `EPERM ... rename ... node_modules/dsh-session-delete` | an older install of this bundle is loaded by the running app, so pnpm cannot swap its folder (Windows) | `remove_bundle` the old install, then install again. The failed attempt leaves the previous install intact; no session data is touched |
 | `application: restart-required` | host row not loaded yet | restart the app, then re-verify |
 | Route answers `404` | host half absent | the row did not mount; check `application`, then restart |
 | Route answers `403` | non-loopback peer | the caller is not on the local machine; do not bypass |
