@@ -1,0 +1,55 @@
+{
+  "name": "dsh-session-delete",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness bundle: a delete button on every sidebar session row, beside archive, with a confirmation that erases the session log and detaches it from its workspace",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "AGENTS.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-bundle",
+    "dsh-plugin",
+    "session",
+    "sidebar"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nina0-0/dsh-session-delete.git"
+  },
+  "homepage": "https://github.com/Nina0-0/dsh-session-delete#readme",
+  "bugs": {
+    "url": "https://github.com/Nina0-0/dsh-session-delete/issues"
+  }
+}

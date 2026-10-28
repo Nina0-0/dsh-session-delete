@@ -1,0 +1,5 @@
+# The session-delete bundle layer: one Host row owning the erase route, plus the
+# browser half that renders the row button and its confirmation dialog.
+- insert:
+    - id: session-delete
+      name: dsh-session-delete

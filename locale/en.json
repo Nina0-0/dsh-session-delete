@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session delete",
+    "description": "A trash button on every sidebar Session row, beside archive, with a confirmation that erases the transcript from disk and detaches the Session from its workspace."
+  }
+}
